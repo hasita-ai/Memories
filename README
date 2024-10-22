@@ -1,0 +1,113 @@
+# Memories Application - README
+
+## Overview:
+
+This is a full-stack MERN (MongoDB, Express, React, Node.js) application called Memories. The application allows users to create, read, update, and delete (CRUD) posts. Users can also "like" posts. It uses MongoDB as the database to store posts, Express and Node.js for the backend server, and React for the client-side user interface.
+
+## Features:
+
+    1. Create, Read, Update, and Delete Posts
+    2. Like Posts
+    3. Responsive UI with Material-UI Components
+    4. Backend API using Express and MongoDB
+    5. State management using Redux
+
+## Prerequisites 
+
+    1. Node.js and npm
+    2. MongoDB (You can use MongoDB Atlas for cloud storage)
+    3. React
+    4. Redux
+
+## Installation
+
+###1. Clone the Repository
+
+git clone <repository-url>
+cd Memories
+
+###2. Setup Environment Variables
+
+Create a .env file in the server directory and add your MongoDB connection string:
+
+CONNECTION_URL=<Your MongoDB Connection URL>
+PORT=5000
+
+###3. Install Dependencies
+Navigate to the root directory
+
+####Install server dependencies:
+
+cd server
+npm install
+
+####Install client dependencies:
+
+cd client
+npm install
+
+###4. Run the Application
+
+####Run the backend server:
+
+cd server
+npm start
+
+####Run the frontend React app:
+
+cd client
+npm start
+
+The application should now be running on http://localhost:3000 with the backend API on http://localhost:5000.
+
+##Folder Structure
+
+###Server Side Code (/server)
+
+1. controllers/posts.js: Contains functions for CRUD operations and liking posts.
+2. models/postMessage.js: Defines the Mongoose schema for a post.
+3. routes/posts.js: Routes for handling HTTP requests to the server.
+4. index.js: Main entry point for the backend, setting up the Express server and connecting to MongoDB.
+
+###Client Side Code (/client)
+
+1. actions/posts.js: Defines Redux action creators for handling API requests.
+2. api/index.js: Axios functions for interacting with the backend.
+3. components: Contains React components for the application.
+4. Form: Component for creating and editing posts.
+5. Posts: Component for displaying the list of posts.
+6. Post: Component for displaying individual post details.
+7. Reducers: Redux reducers for handling state updates.
+8. App.js: Main React component, rendering the layout of the application.
+9. index.js: Entry point for React, setting up Redux and rendering the app.
+
+##Usage
+
+1. Add a New Post: Use the form on the UI to add new posts by entering the title, message, tags, and uploading an image.
+2. Edit an Existing Post: Click the edit icon on any post to update it.
+3. Delete a Post: Click the delete icon on a post to remove it.
+4. Like a Post: Click the like button to increase the like count of a post.
+
+##Technologies Used
+
+###Backend
+
+1. Node.js - JavaScript runtime for server-side programming.
+2. Express - Web framework for building RESTful APIs.
+3. Mongoose - Object Data Modeling (ODM) for MongoDB.
+
+###Frontend
+
+1. React - JavaScript library for building user interfaces.
+2. Redux - State management.
+3. Material-UI - UI components for styling.
+4. Axios - HTTP client for making API requests.
+
+##Additional Tools
+
+1. Nodemon - Automatically restarts the server on changes.
+2. dotenv - Load environment variables from .env files.
+3. Redux Thunk - Middleware for handling asynchronous actions in Redux.
+
+
+
