@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import useStyles from './styles';
 import FileBase from 'react-file-base64';
 import { useDispatch, useSelector } from 'react-redux';
@@ -46,6 +47,11 @@ const Form = ({ currentId, setCurrentId }) => {
             </form>
         </Paper>
     );
+};
+
+Form.propTypes = {
+    currentId: PropTypes.string,
+    setCurrentId: PropTypes.func.isRequired
 };
 
 export default Form;

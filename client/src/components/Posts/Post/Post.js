@@ -1,5 +1,6 @@
 import React from 'react';
 import useStyles from './styles'
+import PropTypes from 'prop-types';
 import {Card, CardActions, CardContent, CardMedia, Button, Typography} from '@mui/material';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -49,6 +50,20 @@ const Post = ({post, setCurrentId }) => {
 
         </Card>
     );
-}
+};
+
+Post.propTypes = {
+    post: PropTypes.shape({
+        _id: PropTypes.string.isRequired,
+        creator: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        message: PropTypes.string.isRequired,
+        tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+        selectedFile: PropTypes.string,
+        createdAt: PropTypes.string.isRequired,
+        likeCount: PropTypes.number,
+    }).isRequired,
+    setCurrentId: PropTypes.func.isRequired
+};
 
 export default Post;

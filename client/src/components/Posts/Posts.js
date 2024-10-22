@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Post from './Post/Post';
 import useStyles from './styles';
@@ -14,14 +15,16 @@ const Posts = ({setCurrentId}) => {
                 {posts.map((post) => (
                     <Grid key={post._id} item xs = {12} sm ={6}>
                         <Post post = {post} setCurrentId={setCurrentId}/>
-                        
                     </Grid>
                 ))}
-                
-
             </Grid>
         )
     );
-}
+};
+
+Posts.propTypes = {
+    setCurrentId: PropTypes.func.isRequired
+};
+
 
 export default Posts;
