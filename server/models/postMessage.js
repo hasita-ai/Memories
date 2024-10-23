@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-//moongoose allows to have uniformity for our documents
 const postSchema = mongoose.Schema({
     title: String,
     Message: String,

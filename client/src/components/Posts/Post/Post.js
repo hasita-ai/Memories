@@ -1,5 +1,5 @@
 import React from 'react';
-import useStyles from './styles'
+import useStyles from './styles';
 import PropTypes from 'prop-types';
 import {Card, CardActions, CardContent, CardMedia, Button, Typography} from '@mui/material';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
@@ -20,14 +20,12 @@ const Post = ({post, setCurrentId }) => {
                 <Typography variant='h6'> {post.creator} </Typography>
                 <Typography variant='body2'> {moment(post.createdAt).fromNow()} </Typography>
             </div>    
-
             <div className={classes.overlay2}>
                 <Button style = {{color: 'white'}} size="small" 
-                onClick={() => {setCurrentId(post._id)}}>
+                onClick={() => setCurrentId(post._id)}>
                     <MoreHorizIcon fontSize="default" />
                 </Button>
             </div>   
-
             <div className={classes.details}>
                 <Typography variant='body2' color="textSecondary"> {post.tags.map((tag) => `#${tag} `)} </Typography>
             </div>
@@ -46,8 +44,6 @@ const Post = ({post, setCurrentId }) => {
                     Delete
                 </Button>
             </CardActions>
-
-
         </Card>
     );
 };

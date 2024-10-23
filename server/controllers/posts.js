@@ -14,7 +14,7 @@ export const getPosts = async (req, res) => {
   }
 };
 
-// You can also add other functions for creating, updating, and deleting posts like this:
+
 export const createPost = async (req, res) => {
   const post = req.body;
   const newPost = new PostMessage(post);

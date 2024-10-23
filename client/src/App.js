@@ -38,6 +38,6 @@ const App = () => {
             </Grow>
         </Container>
     );
-}
+};
 
 export default App;
