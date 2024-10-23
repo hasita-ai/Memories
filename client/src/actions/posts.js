@@ -11,7 +11,7 @@ try {
 } catch (error) {
     console.log(error.message);
 }
-}
+};
 
 export const createPost = (post) => async (dispatch) => {
     try {
@@ -22,7 +22,7 @@ export const createPost = (post) => async (dispatch) => {
     catch(error) {
         console.log(error);
     }
-}
+};
 
 export const updatedPost = (id,post) => async (dispatch) => {
     try{
@@ -32,7 +32,7 @@ export const updatedPost = (id,post) => async (dispatch) => {
         console.log(error);
 
     }
-}
+};
 
 export const deletePost = (id) => async(dispatch) => {
     try{
@@ -42,7 +42,7 @@ export const deletePost = (id) => async(dispatch) => {
         console.log(error);
 
     }
-}
+};
     
 export const likePost = (id) => async(dispatch) => {
     try{
@@ -52,4 +52,4 @@ export const likePost = (id) => async(dispatch) => {
     }catch(error){
         console.log(error);
     }
-}
+};

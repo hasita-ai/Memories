@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon index.js",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "mocha './unit-test/**/*.test.js' --require esm"
   },
   "keywords": [],
   "author": "Hasita Kalepally",
@@ -26,7 +27,12 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "chai": "^5.1.1",
     "eslint": "^9.13.0",
-    "globals": "^15.11.0"
+    "esm": "^3.2.25",
+    "globals": "^15.11.0",
+    "mocha": "^10.7.3",
+    "sinon": "^19.0.2",
+    "sinon-chai": "^4.0.0"
   }
 }
