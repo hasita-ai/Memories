@@ -2,7 +2,7 @@ import * as chai from 'chai';
 import { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import { getPosts, createPost } from '../../controllers/posts.js';
+import { getPosts } from '../../controllers/posts.js';
 import PostMessage from '../../models/postMessage.js';
 
 chai.use(sinonChai);

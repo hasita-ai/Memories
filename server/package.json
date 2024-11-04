@@ -33,6 +33,7 @@
     "globals": "^15.11.0",
     "mocha": "^10.7.3",
     "sinon": "^19.0.2",
-    "sinon-chai": "^4.0.0"
+    "sinon-chai": "^4.0.0",
+    "supertest": "^7.0.0"
   }
 }
