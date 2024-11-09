@@ -1,6 +1,6 @@
 import { makeStyles } from '@mui/styles';
 
-export default makeStyles(({
+export default makeStyles({
   mainContainer: {
     display: 'flex',
     alignItems: 'center',
@@ -11,4 +11,4 @@ export default makeStyles(({
   actionDiv: {
     textAlign: 'center',
   },
-}));
+});

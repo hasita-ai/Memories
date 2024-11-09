@@ -1,6 +1,6 @@
 import { makeStyles } from '@mui/styles';
 
-export default makeStyles(({
+export default makeStyles({
   root: {
     '& .MuiTextField-root': {
       margin: '8px',
@@ -21,4 +21,4 @@ export default makeStyles(({
   buttonSubmit: {
     marginBottom: 10,
   },
-}));
+});

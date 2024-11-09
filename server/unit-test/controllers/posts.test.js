@@ -21,8 +21,8 @@ describe('Posts Controller', () => {
     sinon.restore(); // Clean up after each test
   });
 
-// Test for getPosts
-describe('getPosts', () => {
+  // Test for getPosts
+  describe('getPosts', () => {
     it('should fetch all posts and return a 200 status', async () => {
       const mockPosts = [
         { title: 'Test Post 1', message: 'Test Message 1' },
@@ -35,12 +35,16 @@ describe('getPosts', () => {
     });
 
     it('should return a 404 status if there is an error', async () => {
-      sinon.stub(PostMessage, 'find').rejects(new Error('Error fetching posts'));
-      
+      sinon
+        .stub(PostMessage, 'find')
+        .rejects(new Error('Error fetching posts'));
+
       await getPosts(req, res);
 
       expect(res.status).to.have.been.calledWith(404);
-      expect(res.json).to.have.been.calledWith({ message: 'Error fetching posts' });
+      expect(res.json).to.have.been.calledWith({
+        message: 'Error fetching posts',
+      });
     });
   });
 });

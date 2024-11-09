@@ -27,9 +27,9 @@ describe('Post Routes', () => {
       likeCount: 0,
       tags: [],
     };
-  
+
     sinon.stub(PostMessage.prototype, 'save').resolves(savedPost);
-  
+
     const response = await request(app).post('/posts').send(newPost);
     expect(response.status).to.equal(201);
     expect(response.body).to.include({
@@ -39,6 +39,7 @@ describe('Post Routes', () => {
     expect(response.body).to.have.property('_id');
     expect(response.body).to.have.property('createdAt');
     expect(response.body).to.have.property('likeCount').that.equals(0);
-    expect(response.body).to.have.property('tags').that.is.an('array').that.is.empty;
+    expect(response.body).to.have.property('tags').that.is.an('array').that.is
+      .empty;
   });
 });
