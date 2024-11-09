@@ -2,7 +2,12 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import * as actions from '../src/actions/posts';
 import * as api from '../src/api/index';
-import { FETCH_ALL, CREATE, UPDATE, DELETE } from '../src/constants/actionTypes';
+import {
+  FETCH_ALL,
+  CREATE,
+  UPDATE,
+  DELETE,
+} from '../src/constants/actionTypes';
 
 // Mock the API methods
 jest.mock('../src/api');

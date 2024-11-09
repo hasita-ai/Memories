@@ -1,17 +1,16 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-
+import globals from 'globals';
+import pluginJs from '@eslint/js';
 
 export default [
   {
-    languageOptions: { 
+    languageOptions: {
       globals: {
         ...globals.browser,
-        process: "readonly", 
-        window: "readonly",  
-        document: "readonly"
-      }
-    }
+        process: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+      },
+    },
   },
   pluginJs.configs.recommended,
 ];
